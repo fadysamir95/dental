@@ -559,6 +559,10 @@ body {
     time {
         display: flex;
         justify-content: center;
+        margin-bottom: 9px;
+    }
+    .multi .last-time {
+        margin-bottom: 0px;
     }
 }
 /*------ Scrollbar ---------------------*/
@@ -625,10 +629,18 @@ body {
     width: 90%;
 }
 .schedule-content .details-card {
+    background-color: transparent;
+    border: 0;
+}
+.schedule-content .details-card .text {
+    min-width: 70px;
+}
+.schedule-content .details-card .card-body {
     border: 0;
     border-color: #fff;
     border-radius: 10px;
     border-left: 7px solid #B9B9B9;
+    background-color: #fff;
 }
 .schedule-content .details-card .card-body {
     padding: 0.8rem 1.25rem;
@@ -811,6 +823,55 @@ body {
         margin-top: 10px;
     }
 }
+.multi {
+    overflow-x: scroll;
+}
+.multi .time {
+    margin-top: 63px;
+}
+.multi .last-time {
+    margin-bottom: 63px;
+}
+.multi .room-number {
+    margin-bottom: 20px;
+}
+.multi .room-number:last-child {
+    margin-right: 0px;
+}
+.multi .block {
+    margin-bottom: 20px;
+}
+.multi .block:last-child {
+    margin-right: 0px;
+}
+.multi .block p {
+    color: #D58D91;
+    padding: 7px 10px;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #F7EBEB;
+    margin-top: 20px;
+    border: 1px solid #F7EBEB;
+    border-radius: 10px;
+    box-shadow: 0px 1px 2px 1px #dcdbdb;
+}
+.multi .details-card {
+    margin-right: 12px;
+    min-width: auto;
+}
+.multi .details-card:last-child {
+    margin-right: 0px;
+}
+.multi .text {
+    min-width: 65px;
+    margin-right: 3px;
+}
+.multi .details-card .card-body {
+    padding: 11px;
+}
+.multi .scroll {
+    overflow-x: scroll;
+}
 /*------ Tabs -------------*/
 :root {
     --primary-color: #276B79;
@@ -879,4 +940,12 @@ body {
         transform: scale(0.7);
         margin-top: 10px;
    }
+}
+@media (max-width: 767px) {
+    .multi .last-time {
+        margin-bottom: 0px;
+    }
+    .multi .time {
+        margin-top: 10px;
+    }
 }
